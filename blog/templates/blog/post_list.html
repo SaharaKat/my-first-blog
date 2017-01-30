@@ -14,17 +14,14 @@
                 <p>Traditional and Digital Art, Web Development, Prose</p>
             </section>
         </div>
-        
-        #gallery goes here
-        <div>
-            
-        </div>
-        
-        #prose and posts here
-        <div>
-            
-        </div>
-        
+        {% for post in posts %}
+           <div>
+               <p>published: {{ post.published_date }}</p>
+               <h1><a href="">{{ post.title }}</a></h1>
+               <p>{{ post.text|linebreaksbr }}</p>
+               
+           </div> 
+        {% endfor %}
         <footer>
             <p>2017 DH creations</p>
         </footer>
